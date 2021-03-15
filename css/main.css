@@ -1,0 +1,240 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background-color: #c4af90;
+  color: white;
+}
+
+::selection {
+  background-color: #c4af90;
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 60%;
+  overflow: hidden;
+}
+
+.text-box {
+  width: 100%;
+  border: 1px solid black;
+  text-align: left;
+  padding: 1em;
+}
+
+.text-shadow {
+  text-shadow: 3px 2px 8px #c4af90;
+}
+
+.nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10rem;
+  background-color: whitesmoke;
+}
+
+.nav__logo {
+  width: 20%;
+}
+
+.nav__logo img {
+  width: 7em;
+  padding: 1em;
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 80%;
+  font-size: 2.3rem;
+}
+
+.nav__link {
+  position: relative;
+  margin-right: 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #c4af90;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.nav__link:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.header__nav-cover {
+  height: 10rem;
+}
+
+.header__hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 400px;
+  background-image: url("../img/headerHero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -2;
+}
+
+.header__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  z-index: -1;
+}
+
+.header__title {
+  font-size: 4rem;
+  padding: 0.4em;
+  text-align: center;
+}
+
+.header__text {
+  font-size: 1.8rem;
+}
+
+.main .article {
+  color: #000;
+}
+
+.main .article__title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 2em;
+}
+
+.main .article__title--first {
+  margin-top: 3em;
+}
+
+.main .article__title--marginless {
+  margin: 0;
+}
+
+.main .article__text {
+  font-family: "Lato", sans-serif;
+  padding-top: 1em;
+  line-height: 26px;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+}
+
+.main .article__img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .article__img-box img {
+  height: 20em;
+  margin: 2em 2em 2em 0;
+}
+
+.main .article__img-box--bigger img {
+  height: 30em;
+}
+
+.main .article__img-box--biggest img {
+  height: 40em;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9c8562;
+}
+
+.footer__copy {
+  padding: 3em;
+}
+
+@media (max-width: 870px) {
+  .nav__link {
+    display: none;
+  }
+  .nav__link:last-child {
+    display: block;
+  }
+  .article img {
+    height: 50px;
+  }
+  .main .article__img-box img {
+    height: 20em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
